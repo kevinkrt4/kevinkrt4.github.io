@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!--[if lt IE 9]>
+        <script src="/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="./resources/css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDB</title>
+</head>
+
+<body>
+    <header>             <!-- Start header -->
+        <nav>
+            <a href="./index.html">Home</a>
+        </nav>
+        <img class="banner" src="resources/images/ArtDump1.png" alt="page banner">
+        <h1>GDB Notes</h1>
+    </header>            <!-- End header -->
+
+    <main>               <!-- Start main -->
+        <section>
+            <h2>Compiling and Assembling</h2>
+            <h3>For C:</h3>
+            <p>
+                <code>gcc -g -Wall -Werr</code> <var>source file</var>
+            </p>
+            <h3>For GCC Assembler:</h3>
+            <dl>
+                <dt><code>as --gstabs --32 -o</code> <var>filename</var><code>.o</code>
+                    <var>filename</var><code>.s</code></dt>
+                <dt><code>ld -melf_i386 -o</code> <var>filename</var><code>.out</code>
+                    <var>filename</var><code>.o</code></dt>
+                <dd></dd>
+            </dl>
+            <div role="complementary">  <!-- Start Aside -->
+                Where <var>filename</var> is the name of the file you want to assemble.
+            </div>                      <!-- End Aside -->
+        </section>
+
+        <section>
+            <h2>Loading the program into GDB</h2>
+            <dl>
+                <dt><code>gdb --tui</code> <var>executable</var></dt>
+                <dd><code>--tui</code> tells GDB to display the source-code window</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>GDB Commands</h2>
+            <dl>
+                <dt><code><abbr title="run">r</abbr></code> <var>arg1 arg2 arg3...</var></dt>
+                <dd>Runs the program with the given arguments.</dd>
+                <dt><code><abbr title="run">r</abbr></code> <var>no arguments</var></dt>
+                <dd>Re-runs with the previous set of arguments.</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Breakpoints</h2>
+            <dl>
+                <dt><code><abbr title="break">b</abbr></code> <var>location</var></dt>
+                <dd>Where <var>location</var> can be a label, line number, or function name</dd>
+                <dt><code>info breakpoint</code></dt>
+                <dd>Lists breakpoints with their <var>breakpoint-ID</var> numbers</dd>
+                <dt><code><abbr title="delete">d</abbr> breakpoint</code> <var>breakpoint-ID</var></dt>
+                <dd>Deletes a breakpoint</dd>
+                <dt><code>disable breakpoint</code> <var>breakpoint-ID</var></dt>
+                <dd>Disables a breakpoint without deleting it</dd>
+                <dt><code>enable breakpoint</code> <var>breakpoint-ID</var></dt>
+                <dd>Re-enables a breakpoint</dd>
+                <dt><code>condition</code> <var>breakpoint-ID</var> <var>expression</var></dt>
+                <dd>Break at <var>breakpoint-ID</var> only when <var>expression</var> evaluates to TRUE.</dd>
+            </dl>
+        </section>
+        
+        <section>
+            <h2>Moving up and down the call stack</h2>
+            <dl>
+                <dt><code><abbr title="backtrace">bt</abbr></code></dt>
+                <dd>Print a backtrace of the entire stack: one line per frame for all frames in the stack.</dd>
+                <dt><code>up</code> <var>N</var></dt>
+                <dd>To move up the call stack <var>N</var> frames. If <var>N</var> is not specified up will move up one frame</dd>
+                <dt><code>down</code> <var>N</var></dt>
+                <dd>To move down the call stack <var>N</var> frames. If <var>N</var> is not specified down will move down one frame</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Displaying values</h2>
+            <dl>
+                <dt><code><abbr title="print">p</abbr></code> <var>expression</var></dt>
+                <dd>Displays the value of <var>expression</var>, <var>variable</var>, or <var>register</var></dd>
+                <dt><code>display</code> <var>expression</var></dt>
+                <dd>Displays the value of <var>expression</var> every time the program pauses - for example, at break points.</dd>
+                <dt><code>info locals</code></dt>
+                <dd>Shows all <b>local</b> variables and their respective values.</dd>
+                <dt><code>info args</code></dt>
+                <dd>Shows all arguments that were passed to the program.</dd>
+                <dt><code>info variables</code></dt>
+                <dd>Shows values of all <b>static</b> and <b>global</b> variables.</dd>
+                <dt><code>info registers</code></dt>
+                <dd>Shows contents of all registers.</dd>
+                <dt><code>watch</code> <var>expression</var></dt>
+                <dd>Monitors changes in an <var>expression</var> or <var>variable</var>.</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Stepping through the program</h2>
+            <dl>
+                <dt><code><abbr title="next">n</abbr></code></dt>
+                <dd>Steps over function calls. Skips over the function to the line after the end of the function</dd>
+                <dt><code><abbr title="step">s</abbr></code></dt>
+                <dd>Steps into function calls. Goes to the first line inside the function</dd>
+                <dt><code><abbr title="finish">fin</abbr></code></dt>
+                <dd>Finishes execution of the function you are in. Goes to the line after the end of the function</dd>
+                <dt><code><abbr title="continue">c</abbr></code></dt>
+                <dd>Same as resume. Runs till the next pause (break) is encountered</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Running operating system commands without leaving GDB</h2>
+            <dl>
+                <dt><code>shell</code> <var>command</var></dt>
+                <dd>Runs linux commands without leaving GDB.</dd>
+                <dd>For example: <code>shell</code> <var>ls</var> lists files in the current directory without leaving GDB</dd>
+                <dt><code>make</code></dt>
+                <dd>Reruns <code>make</code> without leaving GDB</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Selecting a GDB window</h2>
+            <dl>
+                <dt><code>focus <abbr title="command">cmd</abbr></code></dt>
+                <dd>Sets focus on the <code>command</code> window</dd>
+                <dt><code>focus <abbr title="source">src</abbr></code></dt>
+                <dd>Sets focus on the <code>source</code> window</dd>
+            </dl>
+        </section>
+    </main>                      <!-- End main -->
+
+    <footer>                     <!-- Start footer -->
+        <p>Page footer: This is where the author and reference information will go.</p>
+    </footer>                    <!-- End footer -->
+</body>
+</html>

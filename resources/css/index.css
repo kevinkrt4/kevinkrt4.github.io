@@ -1,0 +1,19 @@
+/*Support semantic markup elements in older browsers*/
+section, article, nav, aside, header, footer, main, address {
+  display:block;
+}
+
+img {
+    max-width: 100%
+}
+
+  .banner {
+    width: 30%;
+    height: auto;
+}
+footer .version {
+  font-size: 0.85em;
+  color: #888;
+  font-style: italic;
+  margin-top: 0.5em;
+}
