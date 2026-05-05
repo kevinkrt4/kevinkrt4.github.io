@@ -1,0 +1,161 @@
+body {
+  background: #0b0b0c;
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+  width: 100%;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto 1.5rem auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.25rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.content > div {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  background: #151618;
+  border: 1px solid #2a2d31;
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+ul {
+  margin: 0 0 1rem 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+a {
+  color: #d8e6ff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem 1.5rem 1rem;
+}
+
+.version {
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 0.95rem;
+}
+
+.guide-link {
+  text-decoration: underline;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* =========================
+   Workout-specific classes
+   ========================= */
+
+.workout-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.workout-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.workout-block {
+  /* inherits section styling */
+  margin-bottom: 1rem;
+}
+
+.workout-block h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.workout-summary {
+  border-left: 3px solid #888;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.workout-summary ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.workout-summary li {
+  margin-bottom: 0.4rem;
+}
+
+/* ========================= */
+
+@media (max-width: 700px) {
+  .banner {
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0 0.75rem 1.5rem 0.75rem;
+  }
+
+  section {
+    padding: 0.9rem 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+  body {
+    font-size: 1rem;
+  }
+}

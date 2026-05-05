@@ -1,0 +1,69 @@
+body {
+  background: #0b0b0c;
+  color: #f2f2f2;
+}
+
+body .content {
+  margin-top: 1rem;
+}
+
+section {
+  background: #151618;
+  border: 1px solid #2a2d31;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+a {
+  color: #d8e6ff;
+}
+
+a:hover,
+a:focus {
+  color: #ffffff;
+}
+
+.version {
+  color: #b8b8b8;
+}
+.banner {
+  width: 10%;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .banner { 
+    width: 30%;
+  }
+
+  .workout-links li {
+    padding: 0.2rem 0;
+}
+
+  .workout-links li a {
+    display: inline-block;
+    padding: 0.6rem 0.4rem;
+    font-size: 1.05rem;
+
+  }
+}  
+
+.workout-links {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.workout-links li {
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: start;
+   gap: 1rem;
+   align-items: center;
+   padding: 0.4rem 0;
+}
+
+.workout-links li a:last-child {
+   white-space: nowrap;
+}

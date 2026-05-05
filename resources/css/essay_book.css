@@ -1,0 +1,258 @@
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    background-color: #f4f1ed;
+    color: #2f2f2f;
+    line-height: 1.65;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem 1.5rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-family: "Noto Sans", "Helvetica Neue", sans-serif;
+    margin-top: 0;
+    margin-bottom: 1.1rem;
+    line-height: 1.15;
+}
+
+h2, h3, h4 {
+    font-family: "Noto Sans", sans-serif;
+}
+
+h2 {
+  margin-top: 2.75rem;
+}
+
+p {
+    text-indent: 0;
+}
+
+section {
+    margin-bottom: 1.9rem;
+}
+
+ul, ol {
+    margin: 0 0 1rem 1.5rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+blockquote {
+    margin: 1.25rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(47, 47, 47, 0.18);
+}
+
+hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid rgba(47, 47, 47, 0.18);
+}
+
+.byline {
+    opacity: 0.7;
+    font-style: italic;
+    margin-bottom: 1.3rem;
+}
+
+.workflow {
+    margin: 1.5em 0;
+}
+
+@media (max-width: 640px) {
+    body {
+        line-height: 1.6;
+        padding: 1.5rem 1rem 3rem 1rem;
+    }
+
+    h1, h2, h3, h4 {
+        margin-top: 1.75rem;
+    }
+
+    h1 {
+        margin-bottom: 0.9rem;
+    }
+
+    p,
+    ul,
+    ol {
+        margin-bottom: 0.85rem;
+    }
+
+    section {
+        margin-bottom: 1.75rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 0.5rem 0.6rem;
+    }
+
+    td {
+        white-space: normal;
+    }
+    .report {
+        font-size: 17px;
+    }
+}
+
+.essay figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.essay-image {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.essay-image img {
+    display: block;
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.78;
+    filter: grayscale(100%) contrast(0.9);
+    border-radius: 6px;
+}
+
+/* Tables — essay_book style */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  border-bottom: 2px solid #444;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Subtle row separation */
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Optional: improve readability on wide tables */
+table tr td:first-child,
+table tr th:first-child {
+  width: 20%;
+}
+
+/* Light row hover (desktop only feel) */
+tr:hover td {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.refs {
+    list-style: none;
+    padding-left: 0;
+}
+
+.refs li {
+    margin-bottom: 0.4rem;
+}
+
+.ref-org {
+    font-weight: 500; /* instead of bold (700) */
+}
+
+@media (max-width: 700px) {
+  .flow-row {
+    display: block;
+  }
+
+  .flow-step {
+    margin: 0.75rem 0;
+  }
+
+  .flow-arrow {
+    margin-left: 0.25rem;
+  }
+}
+
+/* Subtitle — overrides default h2 behavior */
+
+h2.subtitle {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-style: italic;
+
+    font-size: 1.15rem;
+    line-height: 1.45;
+
+    color: rgba(47, 47, 47, 0.85);
+
+    max-width: 38rem;
+
+    margin-top: -0.25rem;
+    margin-bottom: 1.6rem;
+}
+
+.whose-plan {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.pause {
+  margin: 2.5em 0;
+}
+
+.process-figure {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+}
+
+.process-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.process-figure figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  line-height: 1.4;
+}
