@@ -1,0 +1,98 @@
+/* ===== DESKTOP ===== */
+
+.poem-page {
+  max-width: 1100px;
+}
+
+.poem-collage {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0.6rem;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.poem-first-col {
+  line-height: 1.55;
+}
+
+.poem-first-col p {
+  margin: 0 0 1.1rem 0;
+}
+
+.poem-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poem-columns {
+  grid-column: 1 / -1;
+  column-count: 3;
+  column-gap: 2rem;
+  line-height: 1.55;
+  margin-top: 1rem;
+}
+
+.poem-columns p {
+  break-inside: avoid;
+  margin: 0 0 1.1rem 0;
+}
+
+.final-line {
+  margin-top: 2rem;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 800px) {
+
+  /* Base readable scale */
+  .essay {
+    font-size: 18px;
+  }
+
+  /* Remove desktop constraints */
+  .essay,
+  .poem-page {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  /* Collapse layout */
+  .poem-collage {
+    display: block;
+  }
+
+  /* Image full width */
+  .poem-image {
+    width: 100%;
+    height: auto;
+    margin: 0.75rem 0 1.75rem 0;
+  }
+
+  /* Text rhythm */
+  .poem-first-col,
+  .poem-columns {
+    line-height: 1.7;
+    max-width: 38em;
+  }
+
+  .poem-first-col p,
+  .poem-columns p {
+    margin-bottom: 1.35rem;
+  }
+
+  /* Single column */
+  .poem-columns {
+    column-count: 1;
+    margin-top: 0;
+  }
+
+  .final-line {
+    margin-top: 2rem;
+  }
+}

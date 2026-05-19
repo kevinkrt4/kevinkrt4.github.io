@@ -1,0 +1,26 @@
+/* On It — page-specific styling */
+
+.essay--image-focus .essay-image {
+    margin: 2.25rem 0 2rem 0;
+}
+
+.essay--image-focus .essay-image img {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    /* Override essay_book grayscale look */
+    opacity: 1;
+    filter: none;
+
+    border-radius: 4px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 640px) {
+    .essay--image-focus .essay-image {
+        margin: 1.5rem 0;
+    }
+}
