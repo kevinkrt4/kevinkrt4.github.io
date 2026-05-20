@@ -110,6 +110,11 @@ hr {
     td {
         white-space: normal;
     }
+
+    .essay-image img {
+        width: 92%;
+    }
+    
     .report {
         font-size: 17px;
     }
@@ -121,19 +126,19 @@ hr {
 }
 
 .essay-image {
-    margin: 2rem auto;
+    margin: 4rem auto 4.5rem auto;
     text-align: center;
 }
 
 .essay-image img {
     display: block;
-    max-width: 480px;
-    width: 100%;
+    width: min(72%, 920px);
+    max-width: 920px;
     height: auto;
     margin: 0 auto;
-    opacity: 0.9;
-    filter: grayscale(100%) contrast(1.08);
-    border-radius: 6px;
+    opacity: 0.92;
+    filter: grayscale(100%) contrast(1.04);
+    border-radius: 4px;
 }
 
 /* Tables — essay_book style */
