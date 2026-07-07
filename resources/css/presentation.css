@@ -1,0 +1,291 @@
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.62;
+    color: #2f2f2f;
+    background-color: #f4f1ed;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.015),
+        rgba(0, 0, 0, 0.03)
+    );
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.presentation {
+    width: min(100%, 960px);
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+}
+
+.presentation-header {
+    margin-bottom: 2.5rem;
+}
+
+.breadcrumb {
+    margin: 0 0 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.breadcrumb a {
+    color: #3a4a5a;
+}
+
+.kicker {
+    margin: 0 0 0.5rem;
+    font-family: "Noto Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    color: rgba(47, 47, 47, 0.68);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Noto Sans", "Helvetica Neue", sans-serif;
+    color: #444;
+    font-weight: 500;
+}
+
+h1 {
+    max-width: 820px;
+    margin: 0 0 1rem;
+    font-size: 4rem;
+    line-height: 1.02;
+}
+
+.subtitle {
+    max-width: 720px;
+    margin: 0;
+    font-size: 1.22rem;
+    line-height: 1.48;
+    font-style: italic;
+    color: rgba(47, 47, 47, 0.82);
+}
+
+.slide {
+    margin: 0 0 1.5rem;
+    padding: 1.35rem 1.45rem 1.45rem;
+    background: rgba(255, 255, 255, 0.38);
+    border: 1px solid rgba(47, 47, 47, 0.08);
+    border-radius: 6px;
+}
+
+.slide h2 {
+    margin: 0 0 0.9rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid rgba(47, 47, 47, 0.14);
+    font-size: 1.45rem;
+}
+
+.slide h3 {
+    margin: 1.25rem 0 0.45rem;
+    font-size: 1rem;
+}
+
+.slide p {
+    max-width: 760px;
+}
+
+.slide ul,
+.slide ol {
+    max-width: 760px;
+}
+
+.slide li {
+    margin-bottom: 0.35rem;
+}
+
+.lead {
+    font-size: 1.08rem;
+    color: rgba(47, 47, 47, 0.9);
+}
+
+.principles {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.principle {
+    padding: 0.85rem 0.9rem;
+    background: rgba(255, 255, 255, 0.44);
+    border-left: 2px solid rgba(58, 74, 90, 0.38);
+}
+
+.principle strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: "Noto Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 550;
+    color: #444;
+}
+
+.path-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.presentation-links li {
+    margin-bottom: 0.9rem;
+}
+
+.presentation-links a {
+    display: inline-block;
+    margin-bottom: 0.12rem;
+    font-family: "Noto Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.04rem;
+    font-weight: 600;
+    color: #243f5a;
+    border-bottom: 1px solid rgba(36, 63, 90, 0.35);
+}
+
+.presentation-links div {
+    color: rgba(47, 47, 47, 0.72);
+}
+
+.path-list code {
+    color: #3a4a5a;
+    font-size: 0.95em;
+}
+
+.diagram {
+    margin: 1.25rem 0 0.25rem;
+    padding: 1rem;
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(47, 47, 47, 0.08);
+    border-radius: 6px;
+    box-shadow:
+        inset -18px 0 18px -18px rgba(47, 47, 47, 0.28),
+        inset 18px 0 18px -18px rgba(47, 47, 47, 0.12);
+}
+
+.diagram[data-popout-ready="true"] {
+    cursor: zoom-in;
+}
+
+.mermaid {
+    min-width: 640px;
+    font-family: "Noto Sans", "Helvetica Neue", sans-serif;
+}
+
+.diagram-popout {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: rgba(20, 20, 20, 0.72);
+}
+
+.diagram-popout.is-open {
+    display: flex;
+}
+
+.diagram-popout-panel {
+    position: relative;
+    width: min(96vw, 1280px);
+    max-height: 92vh;
+    padding: 1.25rem;
+    overflow: auto;
+    background: #f8f6f2;
+    border: 1px solid rgba(47, 47, 47, 0.18);
+    border-radius: 6px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.3);
+}
+
+.diagram-popout-content {
+    min-width: 720px;
+}
+
+.diagram-popout-content svg {
+    max-width: none;
+}
+
+.diagram-popout-close {
+    position: sticky;
+    top: 0;
+    float: right;
+    margin: 0 0 0.5rem 0.5rem;
+    padding: 0.2rem 0.5rem 0.25rem;
+    font-family: "Noto Sans", "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    color: #2f2f2f;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(47, 47, 47, 0.18);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.note {
+    margin: 1rem 0 0;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(47, 47, 47, 0.18);
+    color: rgba(47, 47, 47, 0.78);
+    font-style: italic;
+}
+
+.closing {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(47, 47, 47, 0.14);
+    font-size: 0.92rem;
+    color: rgba(47, 47, 47, 0.7);
+}
+
+a {
+    color: #3a4a5a;
+}
+
+code {
+    font-family: Menlo, Consolas, monospace;
+    font-size: 0.88em;
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 17px;
+        line-height: 1.58;
+    }
+
+    .presentation {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .presentation-header {
+        margin-bottom: 1.75rem;
+    }
+
+    h1 {
+        font-size: 2.35rem;
+        line-height: 1.08;
+    }
+
+    .subtitle {
+        font-size: 1.05rem;
+    }
+
+    .slide {
+        padding: 1rem;
+    }
+
+    .principles {
+        grid-template-columns: 1fr;
+    }
+
+    .mermaid {
+        min-width: 560px;
+    }
+
+    .diagram-popout {
+        display: none !important;
+    }
+}
